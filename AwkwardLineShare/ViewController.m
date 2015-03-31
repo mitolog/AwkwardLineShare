@@ -69,11 +69,11 @@
     if (!keyPath ||
         ![keyPath isEqualToString:kObserverKeyPath] ||
         ![contextMessgae isEqualToString:kObserverContext] ||
-        ![(PerlinLineView *)object points]
+        ![(AwkwardLineView *)object points]
         ) return;
     
     if(self.socket && self.socket.socketId){
-        NSMutableArray *points = [(PerlinLineView *)object points];
+        NSMutableArray *points = [(AwkwardLineView *)object points];
         [self.socket emit:@"draw" args:@[points, self.socket.socketId]];
     }
 }
