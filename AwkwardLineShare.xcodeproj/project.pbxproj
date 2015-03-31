@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF9ED3B99B6A076DED022EC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCB9F337213DDC0411B3F4B /* libPods.a */; };
+		460DEAD91AC9C15500B7F591 /* AwkwardLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460DEAD81AC9C15500B7F591 /* AwkwardLineView.m */; };
+		460DEADB1ACA7DF900B7F591 /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = 460DEADA1ACA7DF900B7F591 /* ReadMe.md */; };
 		46EE90511AC47C4000079465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE90501AC47C4000079465 /* main.m */; };
 		46EE90541AC47C4000079465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE90531AC47C4000079465 /* AppDelegate.m */; };
 		46EE90571AC47C4000079465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE90561AC47C4000079465 /* ViewController.m */; };
@@ -14,6 +17,7 @@
 		46EE905C1AC47C4000079465 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EE905B1AC47C4000079465 /* Images.xcassets */; };
 		46EE905F1AC47C4000079465 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EE905D1AC47C4000079465 /* LaunchScreen.xib */; };
 		46EE906B1AC47C4000079465 /* AwkwardLineShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE906A1AC47C4000079465 /* AwkwardLineShareTests.m */; };
+		46EE90791AC47F9800079465 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE90781AC47F9800079465 /* UIColor+HexString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BCB9F337213DDC0411B3F4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		460DEAD71AC9C15500B7F591 /* AwkwardLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwkwardLineView.h; sourceTree = "<group>"; };
+		460DEAD81AC9C15500B7F591 /* AwkwardLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwkwardLineView.m; sourceTree = "<group>"; };
+		460DEADA1ACA7DF900B7F591 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		46EE904B1AC47C4000079465 /* AwkwardLineShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwkwardLineShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EE904F1AC47C4000079465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46EE90501AC47C4000079465 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		46EE90641AC47C4000079465 /* AwkwardLineShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwkwardLineShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EE90691AC47C4000079465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46EE906A1AC47C4000079465 /* AwkwardLineShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwkwardLineShareTests.m; sourceTree = "<group>"; };
+		46EE90771AC47F9800079465 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		46EE90781AC47F9800079465 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		58B844ADA9647E10C7ED097D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB1F5B1973B6742BE514F06 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF9ED3B99B6A076DED022EC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +76,12 @@
 		46EE90421AC47C4000079465 = {
 			isa = PBXGroup;
 			children = (
+				460DEADA1ACA7DF900B7F591 /* ReadMe.md */,
 				46EE904D1AC47C4000079465 /* AwkwardLineShare */,
 				46EE90671AC47C4000079465 /* AwkwardLineShareTests */,
 				46EE904C1AC47C4000079465 /* Products */,
+				AA388715A71E6A1CDDCFAC66 /* Pods */,
+				C9BFA0D4AB42D3C23F6F07C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +101,10 @@
 				46EE90531AC47C4000079465 /* AppDelegate.m */,
 				46EE90551AC47C4000079465 /* ViewController.h */,
 				46EE90561AC47C4000079465 /* ViewController.m */,
+				460DEAD71AC9C15500B7F591 /* AwkwardLineView.h */,
+				460DEAD81AC9C15500B7F591 /* AwkwardLineView.m */,
+				46EE90771AC47F9800079465 /* UIColor+HexString.h */,
+				46EE90781AC47F9800079465 /* UIColor+HexString.m */,
 				46EE90581AC47C4000079465 /* Main.storyboard */,
 				46EE905B1AC47C4000079465 /* Images.xcassets */,
 				46EE905D1AC47C4000079465 /* LaunchScreen.xib */,
@@ -119,6 +139,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA388715A71E6A1CDDCFAC66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58B844ADA9647E10C7ED097D /* Pods.debug.xcconfig */,
+				5FB1F5B1973B6742BE514F06 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9BFA0D4AB42D3C23F6F07C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BCB9F337213DDC0411B3F4B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46EE906E1AC47C4000079465 /* Build configuration list for PBXNativeTarget "AwkwardLineShare" */;
 			buildPhases = (
+				96295A0CDC2AC086DF12A517 /* Check Pods Manifest.lock */,
 				46EE90471AC47C4000079465 /* Sources */,
 				46EE90481AC47C4000079465 /* Frameworks */,
 				46EE90491AC47C4000079465 /* Resources */,
+				9DCF9F0CEBA9DFCBAB677BA7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,11 +253,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		96295A0CDC2AC086DF12A517 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DCF9F0CEBA9DFCBAB677BA7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46EE90471AC47C4000079465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460DEAD91AC9C15500B7F591 /* AwkwardLineView.m in Sources */,
+				46EE90791AC47F9800079465 /* UIColor+HexString.m in Sources */,
+				460DEADB1ACA7DF900B7F591 /* ReadMe.md in Sources */,
 				46EE90571AC47C4000079465 /* ViewController.m in Sources */,
 				46EE90541AC47C4000079465 /* AppDelegate.m in Sources */,
 				46EE90511AC47C4000079465 /* main.m in Sources */,
@@ -343,9 +418,12 @@
 		};
 		46EE906F1AC47C4000079465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B844ADA9647E10C7ED097D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AwkwardLineShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,9 +431,12 @@
 		};
 		46EE90701AC47C4000079465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB1F5B1973B6742BE514F06 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AwkwardLineShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +495,7 @@
 				46EE90701AC47C4000079465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46EE90711AC47C4000079465 /* Build configuration list for PBXNativeTarget "AwkwardLineShareTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +504,7 @@
 				46EE90731AC47C4000079465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
