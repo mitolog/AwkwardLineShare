@@ -47,7 +47,6 @@ static const CGFloat persistence = 0.25;
     CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)self.points[0],
                                             &pt);
     CGContextMoveToPoint(context, pt.x, pt.y);
-    [self.points removeObjectAtIndex:0];
     
     // Connecting the dots
     int i = 0;
@@ -167,6 +166,7 @@ static const CGFloat persistence = 0.25;
 - (void)updatePoints:(NSArray*)pts
 {
     self.points = (pts && [pts isKindOfClass:[NSArray class]] && pts.count) ? [pts mutableCopy] : [@[]mutableCopy];
+    [self setNeedsDisplay];
 }
 
 - (void)prepareDotsWithPoint:(CGPoint)pt
@@ -198,6 +198,7 @@ static const CGFloat persistence = 0.25;
         [self.points addObject:ptDic];
     }
     [self didChangeValueForKey:kObserverKeyPath];
+    [self setNeedsDisplay];
 }
 
 @end

@@ -33,25 +33,6 @@
                                      options:NSKeyValueObservingOptionNew
                                      context:(__bridge void *)(kObserverContext)];
     
-    // Start draw update timer
-    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-    [queue addOperationWithBlock:^{
-        while (1) {
-            NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
-            [mainQueue addOperationWithBlock:^{
-                
-                // Draw owner's view
-                [self.view setNeedsDisplay];
-
-                // Draw member's view
-                for(UIView *subView in self.view.subviews){
-                    [subView setNeedsDisplay];
-                }
-            }];
-            [NSThread sleepForTimeInterval:0.05];
-        }
-    }];
-    
     // Start Web Socket Connection
     [self connectWs];
 }
