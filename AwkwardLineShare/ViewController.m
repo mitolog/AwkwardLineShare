@@ -26,15 +26,35 @@
     
     self.otherPointViewDic = [@{}mutableCopy];
     
-    [(AwkwardLineView*)self.view initializeWithMode:AwkwardLineViewModeOwner
-                                             points:nil];
-    [(AwkwardLineView *)self.view addObserver:self
-                                  forKeyPath:kObserverKeyPath
-                                     options:NSKeyValueObservingOptionNew
-                                     context:(__bridge void *)(kObserverContext)];
+    self.ownerView.mode = AwkwardLineViewModeOwner;
+    [self.ownerView pickRandomLineColor];
+    
+    [self.ownerView addObserver:self
+                     forKeyPath:kObserverKeyPath
+                        options:NSKeyValueObservingOptionNew
+                        context:(__bridge void *)(kObserverContext)];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.1
+                                     target:self
+                                   selector:@selector(removeFirstPoint)
+                                   userInfo:nil
+                                    repeats:YES];
     
     // Start Web Socket Connection
     [self connectWs];
+}
+
+- (AwkwardLineView *)ownerView
+{
+    return (AwkwardLineView *)self.view;
+}
+
+- (void) removeFirstPoint
+{
+    [self.ownerView removeFirstPoint];
+    [self.otherPointViewDic.allValues enumerateObjectsUsingBlock:^(AwkwardLineView* otherView, NSUInteger idx, BOOL *stop){
+        [otherView removeFirstPoint];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +75,7 @@
         ) return;
     
     if(self.socket && self.socket.socketId){
-        NSMutableArray *points = [(AwkwardLineView *)object points];
+        NSArray *points = [(AwkwardLineView *)object points];
         [self.socket emit:@"draw" args:@[points, self.socket.socketId]];
     }
 }
@@ -127,13 +147,12 @@
     AwkwardLineView *aView = self.otherPointViewDic[socketId];
     if(aView && [aView isKindOfClass:[AwkwardLineView class]]){
         // Replace other member's view
-        [aView updatePoints:ary[0]];
+        aView.points = ary[0];
     }else{
         aView = [[AwkwardLineView alloc]initWithFrame:self.view.bounds];
-        aView.backgroundColor = [UIColor clearColor];
         aView.mode = AwkwardLineViewModeMember;
-        [aView initializeWithMode:AwkwardLineViewModeMember
-                           points:ary[0]];
+        aView.points = ary[0];
+        [aView pickRandomLineColor];
         [self.view addSubview:aView];
         
         // Holds other member's view

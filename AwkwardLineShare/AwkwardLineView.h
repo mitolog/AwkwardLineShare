@@ -14,8 +14,14 @@ typedef enum : NSUInteger {
 } AwkwardLineViewMode;
 
 @interface AwkwardLineView : UIView
-@property(nonatomic)NSMutableArray *points;
-@property(nonatomic)AwkwardLineViewMode mode;
-- (void)initializeWithMode:(AwkwardLineViewMode)aMode points:(NSArray*)pts;
-- (void)updatePoints:(NSArray*)pts;
+
+@property(nonatomic,copy,readwrite) NSArray *points;
+@property(nonatomic,assign,readwrite)AwkwardLineViewMode mode;
+@property(nonatomic,copy,readwrite) UIColor *lineColor;
+
+- (void) pickRandomLineColor;
+
+- (void) appendPoint:(CGPoint)point;
+- (void) removeFirstPoint;
+
 @end
