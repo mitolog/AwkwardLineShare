@@ -18,6 +18,7 @@
 		46EE905F1AC47C4000079465 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EE905D1AC47C4000079465 /* LaunchScreen.xib */; };
 		46EE906B1AC47C4000079465 /* AwkwardLineShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE906A1AC47C4000079465 /* AwkwardLineShareTests.m */; };
 		46EE90791AC47F9800079465 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE90781AC47F9800079465 /* UIColor+HexString.m */; };
+		EAFBA07E1ACBC24700C051E7 /* SIOSocket+AddSocketId.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFBA07D1ACBC24700C051E7 /* SIOSocket+AddSocketId.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		46EE90781AC47F9800079465 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		58B844ADA9647E10C7ED097D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5FB1F5B1973B6742BE514F06 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EAFBA07C1ACBC24700C051E7 /* SIOSocket+AddSocketId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SIOSocket+AddSocketId.h"; sourceTree = "<group>"; };
+		EAFBA07D1ACBC24700C051E7 /* SIOSocket+AddSocketId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SIOSocket+AddSocketId.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,16 +102,18 @@
 			children = (
 				46EE90521AC47C4000079465 /* AppDelegate.h */,
 				46EE90531AC47C4000079465 /* AppDelegate.m */,
-				46EE90551AC47C4000079465 /* ViewController.h */,
-				46EE90561AC47C4000079465 /* ViewController.m */,
 				460DEAD71AC9C15500B7F591 /* AwkwardLineView.h */,
 				460DEAD81AC9C15500B7F591 /* AwkwardLineView.m */,
-				46EE90771AC47F9800079465 /* UIColor+HexString.h */,
-				46EE90781AC47F9800079465 /* UIColor+HexString.m */,
-				46EE90581AC47C4000079465 /* Main.storyboard */,
 				46EE905B1AC47C4000079465 /* Images.xcassets */,
 				46EE905D1AC47C4000079465 /* LaunchScreen.xib */,
+				46EE90581AC47C4000079465 /* Main.storyboard */,
+				EAFBA07C1ACBC24700C051E7 /* SIOSocket+AddSocketId.h */,
+				EAFBA07D1ACBC24700C051E7 /* SIOSocket+AddSocketId.m */,
 				46EE904E1AC47C4000079465 /* Supporting Files */,
+				46EE90771AC47F9800079465 /* UIColor+HexString.h */,
+				46EE90781AC47F9800079465 /* UIColor+HexString.m */,
+				46EE90551AC47C4000079465 /* ViewController.h */,
+				46EE90561AC47C4000079465 /* ViewController.m */,
 			);
 			path = AwkwardLineShare;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				460DEAD91AC9C15500B7F591 /* AwkwardLineView.m in Sources */,
+				EAFBA07E1ACBC24700C051E7 /* SIOSocket+AddSocketId.m in Sources */,
 				46EE90791AC47F9800079465 /* UIColor+HexString.m in Sources */,
 				460DEADB1ACA7DF900B7F591 /* ReadMe.md in Sources */,
 				46EE90571AC47C4000079465 /* ViewController.m in Sources */,

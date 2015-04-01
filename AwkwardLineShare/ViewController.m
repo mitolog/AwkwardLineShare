@@ -10,6 +10,7 @@
 #import "PerlinLineView.h"
 #import <SIOSocket/SIOSocket.h>
 #import "AwkwardLineView.h"
+#import "SIOSocket+AddSocketId.h"
 
 @interface ViewController ()
 @property (nonatomic) SIOSocket *socket;
