@@ -112,12 +112,12 @@
         [self.socket on: @"update" callback: ^(SIOParameterArray *args)
         {
             // Update draw line data
-            [self updateDrawLineWithAry:args[0]];
+            [weakSelf updateDrawLineWithAry:args[0]];
         }];
         
         [self.socket on: @"disappear" callback: ^(SIOParameterArray *args)
         {
-             // Remove line from lines
+             // todo: Remove line from otherPointViewDic
              dispatch_async(dispatch_get_main_queue(), ^{
              });
         }];
